@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "deskmate-marketplace",
+  "owner": {
+    "name": "iView Labs",
+    "email": "meena.shah@iviewlabs.com"
+  },
+  "description": "Deskmate — the back office for solo recruiters and small staffing shops.",
+  "plugins": [
+    {
+      "name": "deskmate",
+      "source": "./plugins/deskmate",
+      "description": "Run your whole recruiting desk without an ops team. v1: Contract Guard reviews recruiting contracts (MSAs, offers, NDAs) in plain English and flags the clauses that cost recruiters money.",
+      "author": {
+        "name": "iView Labs"
+      },
+      "category": "productivity",
+      "keywords": ["recruiting", "staffing", "contracts", "recruiter", "back-office", "agency"]
+    }
+  ]
+}

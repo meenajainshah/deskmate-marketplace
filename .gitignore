@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build / scratch artifacts
+*.pdf
+build/
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# MS Office lock/owner temp files
+~$*

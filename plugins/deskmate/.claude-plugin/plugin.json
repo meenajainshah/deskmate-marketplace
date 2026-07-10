@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "deskmate",
+  "description": "The back office for solo recruiters and small staffing shops. v1 ships Contract Guard: reviews recruiting contracts in plain English and flags the clauses that cost recruiters money — the fall-off/guarantee, fee-earning trigger, candidate ownership window, non-circumvent, and uncapped indemnity.",
+  "version": "0.1.0",
+  "author": {
+    "name": "iView Labs",
+    "email": "meena.shah@iviewlabs.com"
+  },
+  "license": "UNLICENSED",
+  "keywords": ["recruiting", "staffing", "contracts", "recruiter", "back-office", "agency", "MSA"]
+}
