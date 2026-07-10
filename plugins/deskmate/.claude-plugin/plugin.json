@@ -1,12 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin.json",
   "name": "deskmate",
-  "description": "The back office for solo recruiters and small staffing shops. Contract Guard reviews recruiting contracts in plain English and captures the agreed terms; Fee Chaser reads those terms to chase only the placement fees that are actually overdue, with tone-matched reminders you approve before sending.",
-  "version": "0.2.0",
+  "description": "The back office for solo recruiters and small staffing shops. Contract Guard reviews recruiting contracts and captures the terms; Fee Chaser reads those terms to chase only the placement fees that are actually overdue; Job Kit turns a client's req into a polished JD, structured interview guide + rubric, and offer template — priced against the same terms. One connected desk, no ops team.",
+  "version": "0.3.0",
   "author": {
     "name": "iView Labs",
     "email": "meena.shah@iviewlabs.com"
   },
   "license": "UNLICENSED",
-  "keywords": ["recruiting", "staffing", "contracts", "recruiter", "back-office", "agency", "MSA", "invoices", "placement-fees", "accounts-receivable"]
+  "keywords": ["recruiting", "staffing", "contracts", "recruiter", "back-office", "agency", "MSA", "invoices", "placement-fees", "accounts-receivable", "job-description", "interview", "scoring-rubric", "offer-letter"]
 }

@@ -29,9 +29,20 @@ The first skill to read the Deal Record. Point it at your open placements and it
 
 Run `/deskmate:fee-chaser` or ask "who owes me money?" / "any overdue invoices?".
 
+## v3 — Job Kit
+
+Turn a client's rough req into a full working kit for the role, tied to the same Deal Record:
+
+- a polished, candidate-facing **job description** (must-haves vs. nice-to-haves, honest and un-inflated),
+- a **structured interview guide + 1–5 scoring rubric** mapped to the must-haves, so candidates are compared on the same bar,
+- an **offer-letter template** (draft only — never sent or signed),
+- **priced up front**: reads `fee_pct` × `fee_base` to show the expected fee, and surfaces the guarantee window you'll inherit on hire.
+
+When the role is filled, its **Role Brief** spawns the placement-ledger row Fee Chaser chases — so the fee you priced is the fee you collect. Run `/deskmate:job-kit` or ask "polish this JD" / "build me an interview guide."
+
 ## Roadmap
 
-Job Kit (JD polish + interview guide + scoring rubric + offer template) · cash forecast · dual-pipeline CRM cleanup · Monday/Friday desk briefs.
+Cash forecast · dual-pipeline CRM cleanup · Monday/Friday desk briefs.
 
 ## Install
 
