@@ -24,9 +24,11 @@ Fee Chaser (chase unpaid placement fees) · Job Kit (JD polish + interview guide
 ## Install
 
 ```
-/plugin marketplace add <your-marketplace-repo>
+/plugin marketplace add meenajainshah/deskmate-marketplace
 /plugin install deskmate@deskmate-marketplace
 ```
+
+> The marketplace repo is **private**. To install, your GitHub account must have access and be authenticated (`gh auth login`).
 
 Then run `/deskmate:contract-guard` or just upload a contract and ask "any red flags?".
 
