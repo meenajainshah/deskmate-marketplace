@@ -62,7 +62,7 @@ The only genuinely new financial build is the **recruiting overlay** the books c
 /plugin install deskmate@deskmate-marketplace
 ```
 
-> The marketplace repo is **private**. To install, your GitHub account must have access and be authenticated (`gh auth login`).
+> Public, source-available. Anyone can add the marketplace and install — see [License](#license) for what you may and may not do with it.
 
 Then run `/deskmate:contract-guard` or just upload a contract and ask "any red flags?".
 
