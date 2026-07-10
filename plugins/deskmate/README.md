@@ -40,9 +40,20 @@ Turn a client's rough req into a full working kit for the role, tied to the same
 
 When the role is filled, its **Role Brief** spawns the placement-ledger row Fee Chaser chases — so the fee you priced is the fee you collect. Run `/deskmate:job-kit` or ask "polish this JD" / "build me an interview guide."
 
+## Design principle — own the core, connect for the rest
+
+Deskmate owns the **recruiting-specific spine** — the terms, the fees, the roles — and **connects to your existing tools for the generic back office** instead of rebuilding them. It will never be an accounting package or an ATS.
+
+- **What Deskmate builds** (nobody else does it): the Deal Record, recruiting-clause review, "is this fee actually earned/overdue per the terms" logic, guarantee/fall-off liability, backdoor-hire fees owed, and role kits.
+- **What Deskmate connects to** (don't rebuild): invoicing, payments, cash forecast, P&L → QuickBooks / Xero / Stripe; email → Gmail/Outlook; candidate pipeline → your ATS/CRM.
+
+**Two modes, same skills:**
+- **Solo recruiter** — no accounting stack. Deskmate is self-contained: **zero connectors**, a local ledger, everything works standalone. This is v0.1–0.3 today.
+- **Streamlined shop** — already runs QuickBooks/Stripe/an ATS. Deskmate becomes the recruiting-intelligence layer on top: push a correctly-termed invoice *from* the Deal Record, read payment status *back*, and add the guarantee/at-risk overlay the books can't compute. **Connectors are optional enrichment, never a requirement.**
+
 ## Roadmap
 
-Cash forecast · dual-pipeline CRM cleanup · Monday/Friday desk briefs.
+The only genuinely new financial build is the **recruiting overlay** the books can't do — guarantee/fall-off liability, fee-at-risk, and backdoor-hire fees owed, computed from the Deal Record. Generic forecasting, invoicing, and pipeline stay with the tools that already do them (via optional connectors). Further out: dual-pipeline CRM sync, Monday/Friday desk briefs.
 
 ## Install
 
