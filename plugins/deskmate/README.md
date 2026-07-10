@@ -1,6 +1,10 @@
 # Deskmate
 
+[![Home page](https://img.shields.io/badge/home-deskmate-4f46e5)](https://meenajainshah.github.io/deskmate-marketplace/) [![Version](https://img.shields.io/badge/version-0.3.0-2563eb)](https://github.com/meenajainshah/deskmate-marketplace) [![License](https://img.shields.io/badge/license-source--available-d97706)](../../LICENSE)
+
 **The back office for solo recruiters and small staffing shops.** Deskmate doesn't find candidates — you've got tools for that. It handles the admin *around* the placement that quietly costs you money and time.
+
+**🔗 [deskmate home page →](https://meenajainshah.github.io/deskmate-marketplace/)**
 
 ## v1 — Contract Guard
 
