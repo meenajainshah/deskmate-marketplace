@@ -74,6 +74,16 @@ Then run `/deskmate:contract-guard` or just upload a contract and ask "any red f
 
 Or upload a contract and say "review this" / "what am I signing?" / "check the payment terms."
 
+## License
+
+Deskmate is **source-available, not open-source** — see [LICENSE](../../LICENSE) (Deskmate Source-Available License 1.0).
+
+In plain English:
+- ✅ You may **view** the source, **install and use** Deskmate for any purpose (including commercially in your own recruiting business), and **customize it for your own internal use**.
+- ❌ You may **not** copy or extract its clause library / schemas into other software, redistribute or resell it (modified or not), or use it to build a competing product.
+
+For any use beyond this — redistribution, or reusing the content in another product — contact **meena.shah@iviewlabs.com** for a separate license.
+
 ---
 
-© iView Labs. Deskmate provides informational contract analysis, not legal advice.
+© 2026 iView Labs Pvt. Ltd. All rights reserved. Deskmate provides informational contract analysis, not legal advice.

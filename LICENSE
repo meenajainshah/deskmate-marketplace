@@ -1,0 +1,53 @@
+Deskmate Source-Available License 1.0
+
+Copyright (c) 2026 iView Labs Pvt. Ltd. All rights reserved.
+
+The Deskmate plugin and all associated files — including its skills, clause
+libraries, benchmarks, schemas, prompts, reference material, and documentation
+(collectively, the "Software") — are made publicly available for transparency
+and use, but are NOT open source. Your use of the Software is governed by the
+terms below. If you do not agree, do not install or use the Software.
+
+1. PERMITTED USE
+   You may:
+   (a) view and read the source of the Software;
+   (b) install the Software from an official Claude plugin marketplace and use
+       it for any purpose, including commercial use in your own business;
+   (c) configure or customize the Software for your own internal use; and
+   (d) make the incidental copies automatically created by installing and
+       running the Software as intended.
+
+2. RESTRICTIONS
+   You may NOT, without the prior written permission of iView Labs:
+   (a) copy, reproduce, or extract the Software or any part of its content
+       (including the clause libraries, benchmarks, schemas, prompts, or
+       reference material) for use in any other software, product, or service;
+   (b) distribute, publish, sublicense, sell, rent, lease, or otherwise make
+       the Software — or any modified or derivative version of it — available
+       to any third party;
+   (c) remove or alter this license or any copyright or attribution notices; or
+   (d) use the Software or its content to build, train, or improve a product or
+       service that competes with the Software.
+
+3. RESERVATION OF RIGHTS
+   All rights not expressly granted are reserved by iView Labs. No rights are
+   granted by implication, estoppel, or otherwise.
+
+4. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+5. NO LIABILITY
+   IN NO EVENT SHALL iVIEW LABS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+   LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE
+   USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+6. OTHER LICENSES
+   For any use not permitted above — including redistribution, modification for
+   distribution, or reuse of the content in another product — contact iView Labs
+   at meena.shah@iviewlabs.com to discuss a separate license.
+
+7. NOT LEGAL ADVICE
+   The Software provides informational contract analysis and related tooling.
+   It is not legal advice.
