@@ -10,7 +10,7 @@
     {
       "name": "deskmate",
       "source": "./plugins/deskmate",
-      "description": "Run your whole recruiting desk without an ops team. v1: Contract Guard reviews recruiting contracts (MSAs, offers, NDAs) in plain English and flags the clauses that cost recruiters money.",
+      "description": "Run your whole recruiting desk without an ops team. Contract Guard reviews recruiting contracts (MSAs, offers, NDAs) in plain English and captures the terms; Fee Chaser reads those terms to chase only the placement fees that are genuinely overdue.",
       "author": {
         "name": "iView Labs"
       },

@@ -15,11 +15,23 @@ Works from a file upload with **zero connectors**. US-framed (at-will, USD, CCPA
 
 > **Marked-up DOCX export — dependencies.** The optional redlined-DOCX output (Word tracked changes + comments) is produced through the host `docx` skill, whose default path uses Node (`docx-js`), and `pandoc`/LibreOffice for reading and rendering. On machines without those installed, Contract Guard falls back to a dependency-free builder (Python standard library `zipfile` + hand-authored OOXML) that produces the same tracked-change DOCX; only the optional visual render (PDF/image preview) is skipped. No install steps are required for the review itself — the DOCX is only generated on request.
 
-Contract Guard also captures the agreed terms into a small **Deal Record** that later Deskmate skills (Fee Chaser, Job Kit) read, so the contract is understood once and never re-opened.
+Contract Guard also captures the agreed terms into a small **Deal Record** that later Deskmate skills read, so the contract is understood once and never re-opened.
+
+## v2 — Fee Chaser
+
+The first skill to read the Deal Record. Point it at your open placements and it tells you what's *actually* overdue — reading each client's real payment terms, so a net-60 invoice at day 40 is left alone and a genuinely late one gets chased.
+
+- resolves the real due date from the client's terms (`fee_earned_on` + `payment_terms_days`), not the invoice date,
+- ranks the truly-overdue fees by exposure × age,
+- drafts **tone-matched reminders** — gentle for a reliable client who's a few days late, firm (citing contractual interest, if any) for a repeat-late one,
+- **never sends or charges automatically** — you approve every reminder,
+- tracks each nudge so the next run escalates instead of repeating.
+
+Run `/deskmate:fee-chaser` or ask "who owes me money?" / "any overdue invoices?".
 
 ## Roadmap
 
-Fee Chaser (chase unpaid placement fees) · Job Kit (JD polish + interview guide + scoring rubric + offer template) · cash forecast · dual-pipeline CRM cleanup · Monday/Friday desk briefs.
+Job Kit (JD polish + interview guide + scoring rubric + offer template) · cash forecast · dual-pipeline CRM cleanup · Monday/Friday desk briefs.
 
 ## Install
 
