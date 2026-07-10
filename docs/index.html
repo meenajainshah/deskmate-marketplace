@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deskmate — the back office for solo recruiters</title>
+<meta name="description" content="Deskmate runs the admin around the placement that quietly costs recruiters money: contract review, fee chasing, and role kits — one connected desk, no ops team.">
+<style>
+  :root{
+    --ink:#0f172a; --ink-soft:#334155; --muted:#64748b; --line:#e2e8f0;
+    --bg:#f8fafc; --card:#ffffff; --accent:#4f46e5; --accent-soft:#eef2ff;
+    --good:#059669; --warn:#d97706; --bad:#dc2626;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* hero */
+  header{background:linear-gradient(160deg,#1e1b4b 0%,#0f172a 100%);color:#fff;padding:84px 0 72px}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:#c7d2fe;background:rgba(199,210,254,.12);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+  h1{font-size:clamp(32px,5vw,52px);line-height:1.1;font-weight:800;letter-spacing:-.02em;margin-bottom:20px}
+  .lede{font-size:clamp(17px,2.4vw,21px);color:#cbd5e1;max-width:660px}
+  .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;font-size:15px}
+  .btn-primary{background:#818cf8;color:#0b1020}
+  .btn-primary:hover{background:#a5b4fc;text-decoration:none}
+  .btn-ghost{background:rgba(255,255,255,.08);color:#e2e8f0;border:1px solid rgba(255,255,255,.18)}
+  .btn-ghost:hover{background:rgba(255,255,255,.14);text-decoration:none}
+
+  section{padding:64px 0}
+  .kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  h2{font-size:clamp(24px,3.4vw,32px);font-weight:800;letter-spacing:-.01em;margin-bottom:16px}
+  .sub{color:var(--ink-soft);font-size:17px;max-width:680px;margin-bottom:36px}
+
+  /* pipeline */
+  .pipe{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap}
+  .pipe .step{flex:1 1 200px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .pipe .step h3{font-size:16px;margin-bottom:6px}
+  .pipe .step p{font-size:14px;color:var(--muted)}
+  .pipe .arrow{align-self:center;color:var(--accent);font-size:22px;font-weight:700}
+  .spine{margin-top:20px;font-size:14px;color:var(--muted);background:var(--accent-soft);border:1px solid #e0e7ff;
+    border-radius:12px;padding:14px 18px}
+  .spine b{color:var(--ink)}
+
+  /* skill cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;position:relative}
+  .card .tag{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.05em}
+  .card h3{font-size:20px;margin:8px 0 10px}
+  .card p{font-size:15px;color:var(--ink-soft);margin-bottom:14px}
+  .card ul{list-style:none;font-size:14px;color:var(--muted)}
+  .card li{padding-left:20px;position:relative;margin-bottom:6px}
+  .card li::before{content:"→";position:absolute;left:0;color:var(--accent)}
+  .badge{position:absolute;top:22px;right:22px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px}
+  .b1{background:#eef2ff;color:#4338ca}.b2{background:#ecfdf5;color:#047857}.b3{background:#fff7ed;color:#c2410c}
+
+  /* install */
+  .install{background:#0f172a;color:#e2e8f0;border-radius:16px;padding:28px 30px}
+  .install h2{color:#fff}
+  code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  pre{background:#020617;border:1px solid #1e293b;border-radius:10px;padding:16px 18px;overflow-x:auto;
+    font-size:14px;color:#a5b4fc;margin-top:14px}
+  .note{font-size:13px;color:#94a3b8;margin-top:14px}
+
+  /* principle */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .split .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .split h3{font-size:16px;margin-bottom:10px}
+  .split ul{list-style:none;font-size:14px;color:var(--ink-soft)}
+  .split li{padding:5px 0;border-bottom:1px dashed var(--line)}
+  .split li:last-child{border:0}
+
+  footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:14px}
+  footer a{font-weight:600}
+  .disclaimer{margin-top:10px;font-size:13px}
+  @media(max-width:640px){.split{grid-template-columns:1fr}.pipe .arrow{transform:rotate(90deg)}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="eyebrow">Claude plugin · for recruiters</span>
+    <h1>Run your whole recruiting desk<br>without an ops team.</h1>
+    <p class="lede">Deskmate handles the admin <em>around</em> the placement that quietly costs you money — reviewing contracts, chasing the fees that are actually overdue, and turning a client's req into a ready-to-run kit. One connected desk.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#install">Install</a>
+      <a class="btn btn-ghost" href="https://github.com/meenajainshah/deskmate-marketplace">View on GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">One connected desk</div>
+    <h2>Understood once, carried across the desk</h2>
+    <p class="sub">Contract Guard reads the contract a single time and captures the terms into a small <b>Deal Record</b>. Every other skill reads that record — nobody re-opens the PDF.</p>
+    <div class="pipe">
+      <div class="step"><h3>📄 Contract Guard</h3><p>Reviews the contract, captures the terms.</p></div>
+      <div class="arrow">→</div>
+      <div class="step"><h3>📋 Job Kit</h3><p>Prices &amp; runs the role against those terms.</p></div>
+      <div class="arrow">→</div>
+      <div class="step"><h3>💸 Fee Chaser</h3><p>Chases only the fees genuinely overdue.</p></div>
+    </div>
+    <p class="spine">The <b>Deal Record</b> is the spine: fee %, payment terms, guarantee window, ownership window. The fee Job Kit <b>prices</b> is the exact fee Fee Chaser <b>chases</b>.</p>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">What's inside</div>
+    <h2>Three skills, zero connectors</h2>
+    <p class="sub">Works from a file upload — no accounting tool or CRM required. US-framed. Not legal advice.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="badge b1">v0.1</span>
+        <div class="tag">CONTRACTS</div>
+        <h3>Contract Guard</h3>
+        <p>Reviews recruiting contracts in plain English and flags the clauses that cost recruiters money.</p>
+        <ul>
+          <li>Fall-off / guarantee &amp; fee trigger</li>
+          <li>Candidate ownership &amp; non-circumvent</li>
+          <li>Uncapped indemnity &amp; missing protections</li>
+          <li>Redlines + marked-up DOCX</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge b2">v0.2</span>
+        <div class="tag">GET PAID</div>
+        <h3>Fee Chaser</h3>
+        <p>Chases unpaid placement fees — but only the ones that are actually overdue, per each client's real terms.</p>
+        <ul>
+          <li>Reads net terms &amp; when the fee is earned</li>
+          <li>Leaves on-time clients alone</li>
+          <li>Tone-matched reminders you approve</li>
+          <li>Never sends or charges on its own</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge b3">v0.3</span>
+        <div class="tag">FILL ROLES</div>
+        <h3>Job Kit</h3>
+        <p>Turns a client's rough req into a full working kit — priced against the same terms.</p>
+        <ul>
+          <li>Polished, un-inflated job description</li>
+          <li>Structured interview guide + 1–5 rubric</li>
+          <li>Offer-letter template (draft only)</li>
+          <li>Priced up front from the Deal Record</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <div class="install">
+      <div class="kicker" style="color:#a5b4fc">Install</div>
+      <h2>Add it in two lines</h2>
+      <p style="color:#cbd5e1;max-width:620px">In Claude Code (or Cowork's terminal), add the marketplace and install the plugin:</p>
+      <pre>/plugin marketplace add meenajainshah/deskmate-marketplace
+/plugin install deskmate@deskmate-marketplace</pre>
+      <p class="note">Then run <code>/deskmate:contract-guard</code> — or just upload a contract and ask "any red flags?"</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">Design principle</div>
+    <h2>Own the core, connect for the rest</h2>
+    <p class="sub">Deskmate owns the recruiting-specific spine and connects to your existing tools for the generic back office — it will never be an accounting package or an ATS.</p>
+    <div class="split">
+      <div class="box">
+        <h3>✅ Deskmate builds</h3>
+        <ul>
+          <li>The Deal Record (recruiting terms)</li>
+          <li>Recruiting-clause review</li>
+          <li>"Is this fee actually overdue?" logic</li>
+          <li>Guarantee / fall-off &amp; backdoor-hire exposure</li>
+          <li>Role kits (JD · rubric · offer)</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>🔌 Deskmate connects to</h3>
+        <ul>
+          <li>Invoicing, payments, cash forecast → QuickBooks / Stripe</li>
+          <li>Email → Gmail / Outlook</li>
+          <li>Candidate pipeline → your ATS / CRM</li>
+          <li>Connectors are optional enrichment</li>
+          <li>Solo works fully standalone</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Deskmate</strong> · <a href="https://github.com/meenajainshah/deskmate-marketplace">github.com/meenajainshah/deskmate-marketplace</a><br>
+    Source-available under the <a href="https://github.com/meenajainshah/deskmate-marketplace/blob/main/LICENSE">Deskmate Source-Available License 1.0</a> — view &amp; use, no copying or resale.
+    <div class="disclaimer">© 2026 iView Labs Pvt. Ltd. All rights reserved. Deskmate provides informational contract analysis, not legal advice.</div>
+  </div>
+</footer>
+
+</body>
+</html>
